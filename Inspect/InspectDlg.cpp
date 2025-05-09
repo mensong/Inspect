@@ -228,7 +228,7 @@ LRESULT OnUIAThreadMsg(HWND, UINT uMsg, WPARAM wParam, LPARAM lParam)
 		pThis->m_UIAHelper.BuildRawTree();
 
 		pThis->m_UIAHelper.RegisterElementStructureChangedEvent(L"home");
-		pThis->m_UIAHelper.RegisterNotifyEvent(L"");
+		pThis->m_UIAHelper.RegisterNotifyEvent(/*L""*/&(pThis->m_UIAHelper));
 
 		ULONGLONG dwLoadUIATreeTime = GetTickCount64() - dwTime1;
 
